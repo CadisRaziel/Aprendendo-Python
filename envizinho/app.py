@@ -1,5 +1,5 @@
 #==================================== CONCATENANDO VARIAVIES ==================================================
-#Tipos de dados
+#Tipos de dados (variaveis)
 # string = "Vitor" (texto)
 # inteiro = 10 (pode ser positivos, negativos ou 0)
 # float = 1.90 (pode ser positivos, negativos ou 0.0)
@@ -8,6 +8,7 @@
 nome = 'Vitor' 
 idade = 28
 gosto_de = 'Programação'
+
 
 
 #para utilizar concatenação utilizamos dessa forma, colocamos um 'f' antes de tudo e utilizamos {} 
