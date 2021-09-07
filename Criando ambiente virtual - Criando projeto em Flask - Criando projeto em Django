@@ -1,0 +1,36 @@
+
+** criando ambiente virtual ** 
+virtualenv env
+source env/bin/activate
+//env -> posso por o nome que eu quero, porém env é o padrao
+
+//deactivate -> desativa o env
+source env/bin/deactivate
+
+
+** criando projeto em flask **
+crie uma pasta para o projeto
+mkdir projeto_name
+cd projeto_name
+pip3 install Flask
+
+**Criando projeto em django**
+sudo django-admin startproject nome_projeto
+
+
+//no vs code crie um arquivo e coloque o seguinte dentro:
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def raiz():
+    return 'Olá mundo!'
+
+app.run()
+
+
+
+//OBSERVAÇÃO ELE ABRE NA PORTA 5000 OU SEJA SE TIVER ALGO CONECTADO NESSA PORTA ELE DARÀ ERRO
+(experiencia propria, tinha um servidor nodejs aberto nessa porta e dava erro toda hora)
+netstat -tulpn -> consultar as portas que estão abertas e o que estão nelas
