@@ -1,0 +1,80 @@
+familia  = ["Vitor", "Giovanna", "Ariella", "Rosana", "Monique", "Michele", "Anastacio"]
+#indices      0          1           2          3         4          5           6
+#aocontrario -7         -6          -5         -4        -3         -2          -1
+print(familia)
+
+#retorna um indice
+print(familia[2])
+
+#Pegando nome por indice de traz para frente(não começa no indice 0, pois não existe -0)
+print(familia[-1])
+
+#Retorna a partir do indice 2 (o numero 5 ele exclui então vai até o 4)
+print(familia[2:5])
+
+#Retorna do indice 2 até o final
+print(familia[2:])
+
+#Alterando nome a partir do indice
+familia[2] = "Ariella Brussolo Zerbato"
+print(familia)
+
+#Adicionando mais uma lista a lista familia (vai juntar as duas lista e vira uma lista só)
+familia.extend(["Doguinho", "Papagaio"])
+print(familia)
+
+#Adicionando um registro só na lista
+familia.append("Passarinho")
+print(familia)
+
+#Adicionando um valor por meio de indice (estou dizendo para adicionar o "Avô" no indicie 1)
+familia.insert(1, "Avô")
+print(familia)
+
+#Remove o ultimo indice
+familia.pop()
+
+#Remove um item em especifico passando o nome dele (lembre-se o nome tem que estar correto !)
+familia.remove("Doguinho")
+
+#Apaga todos os indices que tem na lista (ou seja torna ela vazia)
+familia.clear()
+
+#Retorna apenas o indicie de um item (lembre-se se tiver itens iguais, ele retorna apenas o indice do primeiro item que encontrar)
+familia.index("Vitor")
+print(familia)
+
+#Para ver quantos itens iguais tem em uma lista
+print(familia.count("Vitor"))
+
+#Criando uma lista que vai ser a idade da familia
+idade_familia = [28, 22, 1, 47, 34, 36, 90]
+print(idade_familia)
+
+#Deixando a lista do menor numero para o maior numero (da para fazer com string tambem em ordem alfabetica !)
+idade_familia.sort()
+
+#Deixando a lista de traz para frente (primeiro ordenamos, depois invertemos! funciona com strings tambem !!!)
+idade_familia.sort()
+idade_familia.reverse()
+print(idade_familia)
+
+#Podemos colocar uma lista em outra variavel (copia por referencia, não criou um objeto na memoria, apenas criou uma variavel que passa como referencia)
+#Exemplo a 'familia2' faz referencia a 'familia'
+#Tudo que fizermos na 'familia' será afetado em 'familia2'
+familia2 = familia
+print(familia2)
+familia.remove("Vitor")
+print(familia2)
+
+#Fazendo a copia de uma lista existente em uma nova variavel
+#Ou seja, a lista original não é alterada quando alteramos a copia e vice versa...
+#A 'familia3' é um novo dado em memoria que contem a lista copiada da 'familia'
+familia3 = familia.copy()
+
+# Lista = []
+#List -> podemos alterar, remover, adicionar etc... 
+# Tuples = ()
+#Tuples -> não podemos alterar, não podemos remover, não podemos adicionar etc... é imutavel. (ou seja garante que em nenhum momento será alterada)
+coordenadas = (-49,-36)
+#podemos retornar indice, count, (todas as funções que nao modificam podem ser usadas)
