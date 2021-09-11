@@ -1,0 +1,62 @@
+# set -> valores não podem ser alterados porém podemos adiciona e remover valores
+# set -> {}
+# retorna uma lista bagunçada e não na ordem em que criamos (nunca sabemos a ordem que ele vai trazer os itens)
+# set não tem indice
+# set não aceita valores duplicados, se tiver mais de uma maça ele só vai aparesentar uma !!
+frutas = {"Maça", "Laranja", "Abacaxi"}
+print(frutas)
+frutas.add("Pera")
+print(frutas)
+frutas.remove("Maça")
+print(frutas)
+
+# Como o pop remove o ultimo indice e nunca sabemos qual sera o ultimo indice, evite usar ao maximo o pop
+frutas.pop()
+print(frutas)
+
+# Tipos validos
+set1 = {"Melancia", "Abacaxi"}
+set2 = {1, 2, 3, 4, 5, 6}
+set3 = {False, True}
+set4 = {"Vitor", 28, True}
+
+
+# ------------------------------------------------------------------------------------------------------------
+
+# Dictionary -> chave e valor como em um json (não são ordenados pois não tem um indice)
+# porém podemos passar a 'chave' para encontrar algum item
+# não aceita valores duplicados como no set
+# podemos modificar os valores dentro dele
+
+meses = {
+    "janeiro": 1,
+    "Fevereiro": 2,
+    "Março": 3,
+    "Abril": 4,
+    "maio": 5,
+    "junho": 6,
+    "julho": "jul",
+    "Agosto": "Ago",
+    "setembro": "09",
+    "outubro": "10",
+    "novembro": "11",
+    "dezembro": "12",
+}
+#Retorna o valor da chave, ao utilizar [] e aperta CTRL + Space ele da as chaves ! 
+#* DA ERRO SE A CHAVE TIVER SIDO ESCRITA ERRADA OU NÃO EXISTIR
+print(meses["Agosto"])
+
+#retorna o valor da chave porém usando um get (da o mesmo resultado) porém ao utilizar [] e aperta CTRL + Space ele da as chaves * 
+#* NÃO DA ERRO SE A CHAVE ESTIVER ESCRITA ERRADA OU NÃO EXISTIR, RETORNA 'NONE' OU PASSAMOS UM VALOR PADRÃO
+print(meses.get("Agosto"))
+
+#* PASSANDO UM VALOR PADRÃO PARA O GET CASO NÃO EXISTA A CHAVE COM ISSO NÃO VAI TRAZER NONE E SIM A MENSAGEM QUE COLOCARMOS (VALOR PADRÃO)
+print(meses.get("Ago", "aqui inserimos o valor padrão"))
+
+#* DIFERENÇA ENTRE OS DOIS MODOS ACIMA, O GET SE VOCE ESCREVER A CHAVE ERRADA ELE TRAZ 'NONE' QUE NAO ENCONTROU OU PODE TER UM VALOR PADRÃO
+#* JA AS [] SE VOCE COLCOAR A CHAVE ERRADA ELE VAI DAR ERRO NO PROGRAMA
+#? PREFIRA O GET!!!!
+
+
+#*Para ver a quantidade de itens
+print(len(meses))
