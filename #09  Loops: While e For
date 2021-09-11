@@ -1,1 +1,67 @@
 
+# While -> Em quanto alguma situação não for atingida ele fica se repetindo
+
+#While é utilizados para casos bem especificos (muito pouco usado)
+i = 1
+while i < 10:
+    print(f"i = {i}")
+    i += 1
+#   i = i +1
+# vai ficar adicionando +1 até o i for igual a 10
+print("while terminado")
+print(f"i agora é igual {i}")
+
+
+
+# For -> ele vai passar por cada item da lista vai adicionar na variavel 'item' e vai apresentar no print
+# ou seja para cada item da lista ele vai gerar uma linha com o valor correspondente da lista
+criancas = ["Ariella", "Amigo1", "Amigo2"]
+for item in criancas:
+    print(item)
+
+# vai imprimir letra por letra
+canal = "Ptyhon"
+for letra in canal:
+    print(letra)
+
+
+#Range -> tem 3 parametros , sendo um obrigatório que é o final
+#vai começar do 0 e vai até o 20 (0 é o inicio e 20 é o final)
+for index in range(0, 20):
+    print(index)
+
+# 0 é o inicio, 20 é o final, e o 2 vai dizer para ele ir de 2 em 2
+for index in range(0, 20, 2):
+    print(index)
+
+#vai imprimir o indice e os items da lista
+for index in range(len(criancas)):
+    print(criancas[index],index)
+    
+    
+for index1 in range(5):
+    if index1 == 0:
+        print("Primeira linha")
+    else:
+        print(f"Outras linnhas {index1}")
+
+
+#Aprendendo a fazer um for dentro do outro
+#Para isso criamos uma lista dentro da outra o que gera uma matrix de linhas e colunas
+matrix_numeros = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [0],
+]
+
+for linha in matrix_numeros:
+    # print(linha) -> vai imprimir a lista da forma que esta criado na variavel matrix_numeros
+    print("----") # para saber a hora que ele entra em cada lista
+    for coluna in linha:
+        print(coluna) # -> vai imprimir a lista de numeros na seguencia que ta a lista na matrix_numeros, um em cima do outro
+
+
+
+
+#! LEMBRE-SE OS LOOPS SÃO PESADOS E OCUPAM MUITA MEMÓRIA ! 
