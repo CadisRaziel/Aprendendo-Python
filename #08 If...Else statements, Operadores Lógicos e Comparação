@@ -1,0 +1,74 @@
+tenho_sede = True
+if tenho_sede:
+    # se for 'True' ele executa esse comando 'print'
+    print("beber agua")
+
+
+esta_frio = True
+if esta_frio:
+    print("Vestir casaco")
+else:
+    print("Vestir camiseta")
+
+
+# or -> igual o || (se qualquer uma das afirmações for verdadeira ele executa o primeiro print)
+sede = True
+fome = True
+if sede or fome:
+    print("Vou na cozinha")
+else:
+    print("ficar vendo netflix")
+
+# and -> igual o & (se as duas situações for verdadeira ele execura o priemiro print, se tiver uma falsa ele vai para o else)
+sede1 = True
+fome1 = True
+if sede1 and fome1:
+    print("Fazer lanche")
+else:
+    print("Não tenho fome")
+
+# not -> mesmo que a condição for verdadeira, ele vai negar e colocar false
+# porém o not ele faz o seguinte, se a condição for true ele transforma em false
+# se a condição for false ele transforma em True
+# elif = igual um else if
+sede2 = False
+fome2 = True
+if sede2 and fome2:
+    print("Fazer lanche na cozinhaaaaa")
+elif sede2 and not(fome2):
+    print("Não tenho fome")
+elif not(sede2) and fome2:
+    print("Fazer um lanchão")
+else: 
+    print("ficar no pc")
+
+
+
+num1 = 5
+num2 = 32
+
+if num1 == num2:
+    print("num1 é igual o num2")
+elif num1 != num2:
+    print("num1 é diferente do num2")
+elif num1 > num2:
+    print("num1 é maior que num2")
+elif num1 < num2:
+    print("num1 é menor que num2")
+elif num1 >= num2:
+    print("num1 é maior ou igual que num2")
+elif num1 <= num2:
+    print("num1 é menor ou igual que num2")
+
+#? Operadores de comparação
+# == -> igual
+# != -> diferente
+# > -> Maior que
+# < -> Menor que 
+# >= -> Maior ou igual que
+# <= -> Menor ou igual que
+
+#? Operadores lógicos
+# or -> 'Ou'
+# and -> 'E'
+# not() -> vai trasnformar false em true, e true em false
