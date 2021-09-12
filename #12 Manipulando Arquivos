@@ -1,0 +1,81 @@
+
+#* open = recebe dois parametro
+#open("caminho", "r")
+
+#modes
+#* r -> leitura
+#* a -> Append / Incrementar
+#* w -> Escrita (se ja tiver arquivo escrito, ele vai reescrever por cima o que voce colocar com ele e apagar o que tinha, CUIDADO)
+#* x -> criar arquivo
+#* r+ -> Leitura mais escrita
+
+#TODO OBS: se voce passar o arquivo final exemplo: teste2.txt2 (repare o 2 no final, esse arquivo não exite)
+#TODO caso eu execute com um 'w' por exemplo, ele vai criar esse arquivo e adicionar o que quero
+
+#* precisamos passar o caminho completo
+#arquivo = open("/home/vitorbrussolozerbato/Documentos/python_teste/envizinho/Manipulando_arquivos/teste3.txt", "x")
+
+#================================= UTILIZANDO O 'r' =====================================================================
+#? r -> leitura (vai apenas apresentar na tela)
+#* readable -> retorna um false ou true para dizer se o arquivo pode ser lido ou não
+#print(arquivo.readable())
+
+#* read -> vai ler o arquivo todo e retornar o que tem nele
+#print(arquivo.read())
+
+#* readline -> vai ler a primeira linha do arquivo
+#print(arquivo.readline())
+#* se eu passar varios readline ele vai ler linha por linha
+#print(arquivo.readline())
+#print(arquivo.readline())
+
+#* readlines -> vai pega o arquivo e transformar numa lista e com isso podemos manipualr com indice etc.. todos os beneficios de uma lista
+#lista = arquivo.readlines()
+#print(lista)
+#print(lista[3])
+#=======================================================================================================================
+
+#================================= UTILIZANDO O 'a' ====================================================================
+#? a -> Append / Incrementar um novo dado no teste.txt
+#* write -> vai adicionar no final do arquivo
+#* lembre-se de sempre deixar uma linha em branco para ao inves de por o '\n' no começo, colocar no final
+# arquivo.write("Json\n")
+# arquivo.write("Postgress\n")
+# arquivo.write("Mongodb\n")
+# arquivo.write("C++\n")
+#=======================================================================================================================
+
+#================================= UTILIZANDO O 'w' =====================================================================
+#? w -> Escrita (se ja tiver arquivo escrito, ele vai reescrever por cima o que voce colocar com ele e apagar o que tinha, CUIDADO)
+# arquivo.write("Json\n")
+# arquivo.write("Postgress\n")
+# arquivo.write("Mongodb\n")
+# arquivo.write("C++\n")
+#=======================================================================================================================
+
+#================================= UTILIZANDO O 'x' =====================================================================
+#? x -> criar arquivo
+# arquivo.write("Vscode\n")
+# arquivo.write("Android Studio\n")
+# arquivo.write("Pycharm\n")
+# arquivo.write("Atom\n")
+#=======================================================================================================================
+
+#* sempre feche o arquivo !!!
+#arquivo.close()
+
+
+#================================= EXCLUINDO ARQUIVO ===================================================================
+#? para excluir arquivos é necessario importar uma biblioteca 'os'
+import os
+
+#* remove -> remove um arquivo (precisamos passar o camimho dele) 
+#* if os.path.exists -> condição para ver se o arquivo existe ou não
+# if os.path.exists("/home/vitorbrussolozerbato/Documentos/python_teste/envizinho/Manipulando_arquivos/teste3.txt"):
+#     os.remove("/home/vitorbrussolozerbato/Documentos/python_teste/envizinho/Manipulando_arquivos/teste3.txt")
+# else:
+#     print("Arquivo não existe")
+
+#* os.rmdir -> remove uma pasta (somente se ela estiver vazia)
+os.rmdir("/home/vitorbrussolozerbato/Documentos/python_teste/envizinho/Manipulando_arquivos/teste")
+#========================================================== =============================================================
